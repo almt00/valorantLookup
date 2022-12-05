@@ -2,6 +2,8 @@ import "./App.css";
 import logo from "./assets/valorant_logo.svg";
 import { Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home.js";
+import About from "./pages/About.js";
+
 import TestFetch from "./components/TestFetch";
 
 function App() {
@@ -34,7 +36,7 @@ function App() {
         <Route path="/agents" element={<TestFetch/>} />
         <Route path="/abilities" element={<h1>Abilities</h1>} />
         <Route path="/search" element={<h1>Search</h1>} />
-        <Route path="/about" element={<h1>About</h1>} />
+        <Route path="/about" element={<About/>} />
         <Route path="/agents/:id" element={<h1>Agent Detail</h1>} />
 
       </Routes>
