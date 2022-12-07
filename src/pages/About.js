@@ -14,11 +14,10 @@ const Flex = styled.div`
 
 const Left = styled.div`
   align-self:flex-start;
-  width: 50vw ;
+  max-width: 50vw ;
 `
 const Right = styled.div`
   align-self:flex-end;
-  width: 50vw ;
 `
 
 export default function Home() {

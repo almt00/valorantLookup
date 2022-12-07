@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-//import './index.css';
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
@@ -65,8 +64,6 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  max-height: 100%;
   display: block;
 }
 

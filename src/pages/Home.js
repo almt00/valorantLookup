@@ -7,15 +7,26 @@ import SubTitle from "../styles/SubTitle";
 
 const Flex = styled.div`
 display: flex;
-gap: 1rem;
+gap: 2rem;
 margin: ${props => props.margin}`
 
 const Gallery = styled.div `
 display: flex;
 flex-direction: row;
-justify-content: space-between;
-align-items: center;`
+justify-content: flex-start;
+gap: 1rem;
+align-items: flex-start;
+flex-wrap: wrap; 
+align-self: flex-end;
+`
 
+const GalleryItem = styled.div`
+background-color: #636363;
+color: #ffffff;
+padding: 1rem;
+height: 10rem ;
+width: 10rem;
+border-radius: 10px;`
 
 export default function Home() {
   return (
@@ -38,26 +49,26 @@ export default function Home() {
             oppose him.
           </p>
           <Gallery>
-            <div>
+            <GalleryItem>
               <p>Ability 1</p>
               <p>Cove</p>
               <img></img>
-            </div>
-            <div>
+            </GalleryItem>
+            <GalleryItem>
               <p>Grenade</p>
               <p>Cascade</p>
               <img></img>
-            </div>
-            <div>
+            </GalleryItem>
+            <GalleryItem>
               <p>Ability 1</p>
               <p>Cove</p>
               <img></img>
-            </div>
-            <div>
+            </GalleryItem>
+            <GalleryItem>
               <p>Grenade</p>
               <p>Cascade</p>
               <img></img>
-            </div>
+            </GalleryItem>
           </Gallery>
         </div>
       </Flex>
