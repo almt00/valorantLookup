@@ -7,30 +7,38 @@ import styled from "styled-components";
 
 import TestFetch from "./components/TestFetch";
 
+const Nav = styled.nav`
+  font-family: "Mulish", sans-serif;
+  font-weight: 800;
+  background-color: #242424;
+  border-bottom: 7px solid #ff4655;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 2vw;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  width: 100%;
+`;
+
+const Ul = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 60px;
+  color: #ffffff;
+  list-style: none;
+
+  a,
+  p {
+    color: #ffffff;
+    text-decoration: none;
+  }
+`;
 function App() {
-  const Nav = styled.nav`
-    background-color: #242424;
-    border-bottom: 7px solid #ff4655;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vh 2vw;
-    color: #ffffff;
-    position: sticky;
-    top: 0;
-    width: 100%;
-  `;
-
-  const Ul = styled.ul`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 60px;
-    color: #ffffff;
-  `;
-
   return (
     <>
       <Nav>

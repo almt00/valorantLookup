@@ -2,31 +2,34 @@ import React from "react";
 import agent_group from "../assets/agent_group.png";
 import polygon from "../assets/polygon.svg";
 import styled from "styled-components";
+import Title from "../styles/Title";
+import SubTitle from "../styles/SubTitle";
+import { AltContainer } from "../styles/Container";
+
+const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+const Left = styled.div`
+  align-self:flex-start;
+  width: 50vw ;
+`
+const Right = styled.div`
+  align-self:flex-end;
+  width: 50vw ;
+`
 
 export default function Home() {
-
-  const Container = styled.div`
-    margin-left: auto;
-    max-width: 1440px;
-    padding-right: 5vw;
-    padding-left: 5vw;
-    padding-top: 5vh;
-    background: url(${polygon});
-    background-repeat: no-repeat;
-    background-position: right top;
-  `;
-
-  const ImageRight = styled.img`
-  
-  `
-
   return (
-    <Container>
+    <AltContainer>
       <div>
-        <h1>Valorant Lookup</h1>
-        <h2>about this project</h2>
+        <Title>Valorant Lookup</Title>
+        <SubTitle>about this project</SubTitle>
       </div>
-      <div>
+      <Flex>
+        <Left>
         <p>
           This app was made for a university project for the class of web
           development technologies, making use of React and Redux to fetch data
@@ -38,10 +41,12 @@ export default function Home() {
           of information about the game's agents, weapons, contracts, maps and
           more.
         </p>
-      </div>
-      <div>
-        <img src={agent_group}></img>
-      </div>
-    </Container>
+        </Left>
+        
+        <Right>
+          <img src={agent_group}></img>
+        </Right>
+      </Flex>
+    </AltContainer>
   );
 }

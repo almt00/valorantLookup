@@ -41,7 +41,6 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   font-family: 'Inter';
   font-style: normal;
@@ -49,8 +48,15 @@ body {
   font-size: 1rem;
   color: #000000;
   background-color: #F3F3F3;
+  min-height: 100%;
 }
+p {
+    line-height: 1.5rem;
 
+    &:not(:last-child)  {
+        margin-bottom: 1rem;
+    }
+}
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -60,6 +66,7 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
+  max-height: 100%;
   display: block;
 }
 
