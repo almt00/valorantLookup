@@ -4,9 +4,8 @@ import { Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home.js";
 import About from "./pages/About.js";
 import styled from "styled-components";
-
-import TestFetch from "./components/TestFetch";
 import Agents from "./pages/Agents";
+import AgentDetail from "./pages/AgentDetail";
 
 const Nav = styled.nav`
   font-family: "Mulish", sans-serif;
@@ -68,7 +67,7 @@ function App() {
         <Route path="/abilities" element={<h1>Abilities</h1>} />
         <Route path="/search" element={<h1>Search</h1>} />
         <Route path="/about" element={<About />} />
-        <Route path="/agents/:id" element={<h1>Agent Detail</h1>} />
+        <Route path="/agents/:id" element={<AgentDetail />} />
       </Routes>
     </>
   );

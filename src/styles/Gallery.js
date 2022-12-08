@@ -11,7 +11,7 @@ const Gallery = styled.div`
 `;
 
 const GalleryItem = styled.div`
-  background-color: #636363;
+  background-color: #525252;
   color: #ffffff;
   padding: 1rem;
   height: 10rem;
@@ -21,17 +21,45 @@ const GalleryItem = styled.div`
 `;
 
 const ItemImage = styled.img`
-  height: 23rem;
+  height: 40%;
   width: auto;
+  position: relative;
+  margin: auto;
+`;
+
+const ItemImageBig = styled(ItemImage)`
+  height: 100%;
+  width: auto;
+  position: relative;
+  margin-left: 3rem;
+  margin-top: 2rem;
 `;
 
 const GalleryItemBig = styled(GalleryItem)`
-  height: 20rem;
-  width: 20rem;
+  height: 15rem;
+  width: 15rem;
   background-image: url(${(prop) => prop.bgImg});
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 `;
 
-export { Gallery, GalleryItem, ItemImage, GalleryItemBig };
+const DisplayGalleryItem = styled(GalleryItemBig)`
+  height: 17rem;
+  width: 40%;
+`;
+const GalleryItemTitle = styled.h1`
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+`;
+export {
+  Gallery,
+  GalleryItem,
+  ItemImage,
+  ItemImageBig,
+  GalleryItemBig,
+  DisplayGalleryItem,
+  GalleryItemTitle,
+};

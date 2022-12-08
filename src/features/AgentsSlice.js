@@ -8,7 +8,7 @@ const agentsSlice = createSlice({
   name: "agents",
   initialState,
   reducers: {
-    addAgents: (state, {payload}) => {
+    addAgents: (state, { payload }) => {
       state.agents = payload;
     },
   },
