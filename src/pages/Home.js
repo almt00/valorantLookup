@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Route, Routes, Link } from "react-router-dom";
-import styled from "styled-components";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container } from "../styles/Container";
 import Title from "../styles/Title";
 import SubTitle from "../styles/SubTitle";
@@ -11,7 +10,6 @@ import {
   DisplayGalleryItem,
   Gallery,
   GalleryItem,
-  GalleryItemBig,
   GalleryItemTitle,
   ItemImage,
   ItemImageBig,
@@ -40,9 +38,9 @@ export default function Home() {
       let randomAgent = allAgents[Math.floor(Math.random() * allAgents.length)];
       let randomAgentAbilities = randomAgent.abilities.map((ability, index) => {
         return (
-          <GalleryItem>
+          <GalleryItem key={index}>
             <GalleryItemTitle>{ability.slot}</GalleryItemTitle>
-            <p>{ability.displayName}</p>
+            <p key={index}>{ability.displayName}</p>
             <ItemImage src={ability.displayIcon}></ItemImage>
           </GalleryItem>
         );

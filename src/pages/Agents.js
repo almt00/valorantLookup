@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+//import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { getAllAgents } from "../features/AgentsSlice";
 import { Container } from "../styles/Container";
 import Title from "../styles/Title";
 import { Gallery, GalleryItemBig } from "../styles/Gallery";
 import { ItemImageBig } from "../styles/Gallery";
-import styled from "styled-components";
 
 export default function Agents() {
   const agents = useSelector(getAllAgents);

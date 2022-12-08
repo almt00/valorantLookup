@@ -1,6 +1,5 @@
 import React from "react";
 import agent_group from "../assets/agent_group.png";
-import polygon from "../assets/polygon.svg";
 import styled from "styled-components";
 import Title from "../styles/Title";
 import SubTitle from "../styles/SubTitle";
@@ -36,8 +35,8 @@ export default function Home() {
           </p>
           <p>
             I chose the unofficial Valorant API as I am familiar with its
-            content (since I play the game and it's one of my favorites) and it
-            has a lot of information about the game's agents, weapons,
+            content (since I play the game and it&apos;s one of my favorites) and it
+            has a lot of information about the game&apos;s agents, weapons,
             contracts, maps and more.
           </p>
         </Left>
