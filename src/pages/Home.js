@@ -4,7 +4,7 @@ import { Container } from "../styles/Container";
 import Title from "../styles/Title";
 import SubTitle from "../styles/SubTitle";
 import { useDispatch, useSelector } from "react-redux";
-import { addAgents, getAllAgents } from "../features/AgentsSlice";
+import { fetchAsyncAgents, getAllAgents } from "../features/AgentsSlice";
 import Flex from "../styles/Flex";
 import {
   DisplayGalleryItem,
@@ -20,16 +20,8 @@ export default function Home() {
 
   // calling the API
   useEffect(() => {
-    fetch(`https://valorant-api.com/v1/agents?isPlayableCharacter=true`)
-      .then((response) => response.json())
-      .then((actualData) => {
-        dispatch(addAgents(actualData));
-        console.log(actualData.data);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  }, []);
+    dispatch(fetchAsyncAgents());
+  }, [dispatch]);
 
   const agents = useSelector(getAllAgents);
   function renderRandomAgent() {

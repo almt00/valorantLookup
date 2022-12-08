@@ -5,8 +5,7 @@ const Flex = styled.div`
   gap: 2rem;
   margin: ${(props) => props.margin};
   justify-content: space-between;
-    align-items: center;
-    
+  align-items: center;
 `;
 
 export default Flex;

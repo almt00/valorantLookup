@@ -7,7 +7,7 @@ import Title from "../styles/Title";
 import { Gallery, GalleryItemBig } from "../styles/Gallery";
 import { ItemImageBig } from "../styles/Gallery";
 import SelectorFilter from "./SelectorFilter";
-import Flex from "../styles/Flex"
+import Flex from "../styles/Flex";
 
 export default function Agents() {
   const agents = useSelector(getAllAgents);
