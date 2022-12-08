@@ -6,6 +6,7 @@ import About from "./pages/About.js";
 import styled from "styled-components";
 
 import TestFetch from "./components/TestFetch";
+import Agents from "./pages/Agents";
 
 const Nav = styled.nav`
   font-family: "Mulish", sans-serif;
@@ -63,7 +64,7 @@ function App() {
       </Nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/agents" element={<TestFetch />} />
+        <Route path="/agents" element={<Agents />} />
         <Route path="/abilities" element={<h1>Abilities</h1>} />
         <Route path="/search" element={<h1>Search</h1>} />
         <Route path="/about" element={<About />} />

@@ -4,6 +4,8 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import { Provider } from "react-redux";
+import { store } from "./features/store";
 
 const GlobalStyle = createGlobalStyle`
   /* Box sizing rules */
@@ -97,7 +99,9 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     <BrowserRouter>
-      <App />
+      <Provider Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

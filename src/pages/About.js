@@ -9,7 +9,7 @@ import { AltContainer } from "../styles/Container";
 const Flex = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5rem;
 `;
 
 const Left = styled.div`
