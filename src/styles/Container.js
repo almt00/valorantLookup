@@ -22,7 +22,8 @@ const AltContainer = styled(Container)`
   padding-bottom: 0;
   background: url(${polygon});
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right top;
+  background-size: 100%;
   display: flex;
   flex-direction: column;
   gap: 50px;

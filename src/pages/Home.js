@@ -59,7 +59,7 @@ export default function Home() {
         </>
       );
     } else {
-      return <h1>erro</h1>;
+      return <h1>loading</h1>;
     }
   }
 

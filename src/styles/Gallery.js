@@ -3,11 +3,12 @@ import styled from "styled-components";
 const Gallery = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 1rem;
   align-items: flex-start;
   flex-wrap: wrap;
   align-self: flex-end;
+  margin-top: 1rem;
 `;
 
 const GalleryItem = styled.div`

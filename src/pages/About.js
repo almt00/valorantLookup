@@ -7,17 +7,27 @@ import { AltContainer } from "../styles/Container";
 import Button from "../styles/Button";
 
 const Flex = styled.div`
-  display: flex;
+  /* isplay: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1rem; */
+  display: grid;
 `;
 
 const Left = styled.div`
-  align-self: flex-start;
-  max-width: 50vw;
+  /* align-self: flex-start;
+  max-width: 50vw; */
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
 `;
 const Right = styled.div`
-  align-self: flex-end;
+  /* align-self: flex-end;
+  height: 50%; */
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 2;
+`;
+
+const AgentsImg = styled.img`
+  width: 100%;
 `;
 
 export default function Home() {
@@ -50,7 +60,7 @@ export default function Home() {
         </Left>
 
         <Right>
-          <img src={agent_group}></img>
+          <AgentsImg src={agent_group}></AgentsImg>
         </Right>
       </Flex>
     </AltContainer>

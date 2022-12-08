@@ -44,6 +44,12 @@ body {
   background-color: #F3F3F3;
   min-height: 100%;
 }
+
+html,#root {
+  min-height: 100%;
+    margin: 0;
+}
+
 p {
     line-height: 1.5rem;
 
