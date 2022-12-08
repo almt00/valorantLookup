@@ -28,4 +28,4 @@ const AltContainer = styled(Container)`
   gap: 50px;
 `;
 
-export  {Container, AltContainer};
+export { Container, AltContainer };
