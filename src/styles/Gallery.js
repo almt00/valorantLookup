@@ -18,13 +18,16 @@ const GalleryItem = styled.div`
   width: 10rem;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 `;
 
 const ItemImage = styled.img`
   height: 40%;
   width: auto;
-  position: relative;
-  margin: auto;
+  position: absolute;
+  //margin: auto;
+  bottom: 0.5rem;
+  right: 1rem;
 `;
 
 const ItemImageBig = styled(ItemImage)`
@@ -33,6 +36,8 @@ const ItemImageBig = styled(ItemImage)`
   position: relative;
   margin-left: 3rem;
   margin-top: 2rem;
+  bottom: auto;
+  right: auto;
 `;
 
 const GalleryItemBig = styled(GalleryItem)`

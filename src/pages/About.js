@@ -4,11 +4,12 @@ import styled from "styled-components";
 import Title from "../styles/Title";
 import SubTitle from "../styles/SubTitle";
 import { AltContainer } from "../styles/Container";
+import Button from "../styles/Button";
 
 const Flex = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 1rem;
 `;
 
 const Left = styled.div`
@@ -35,10 +36,17 @@ export default function Home() {
           </p>
           <p>
             I chose the unofficial Valorant API as I am familiar with its
-            content (since I play the game and it&apos;s one of my favorites) and it
-            has a lot of information about the game&apos;s agents, weapons,
-            contracts, maps and more.
+            content (since I play the game and it&apos;s one of my favorites)
+            and it has a lot of information about the game&apos;s agents,
+            weapons, contracts, maps and more.
           </p>
+          <a
+            href="https://dash.valorant-api.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button type="button">go to API</Button>
+          </a>
         </Left>
 
         <Right>

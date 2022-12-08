@@ -3,41 +3,10 @@ import logo from "./assets/valorant_logo.svg";
 import { Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home.js";
 import About from "./pages/About.js";
-import styled from "styled-components";
 import Agents from "./pages/Agents";
 import AgentDetail from "./pages/AgentDetail";
+import { Nav, Ul } from "./styles/Nav";
 
-const Nav = styled.nav`
-  font-family: "Mulish", sans-serif;
-  font-weight: 800;
-  background-color: #242424;
-  border-bottom: 7px solid #ff4655;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1vh 2vw;
-  color: #ffffff;
-  position: sticky;
-  top: 0;
-  width: 100%;
-`;
-
-const Ul = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 60px;
-  color: #ffffff;
-  list-style: none;
-
-  a,
-  p {
-    color: #ffffff;
-    text-decoration: none;
-  }
-`;
 function App() {
   return (
     <>
