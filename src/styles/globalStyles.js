@@ -62,6 +62,11 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+b {
+  color: #FF4655;
+  font-weight: 800;
+}
+
 /* Make images easier to work with */
 img,
 picture {

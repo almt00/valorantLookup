@@ -1,13 +1,14 @@
-//import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+/* eslint-disable */
+
 import { useSelector } from "react-redux";
 import { getAllAgents } from "../features/AgentsSlice";
 import { Container } from "../styles/Container";
 import Title from "../styles/Title";
-import { Gallery, GalleryItemBig } from "../styles/Gallery";
-import { ItemImageBig } from "../styles/Gallery";
+import { Gallery } from "../styles/Gallery";
 import SelectorFilter from "./SelectorFilter";
 import Flex from "../styles/Flex";
+import GalleryItemAgent from "./GalleryItemAgent";
+import Spinner from "./Spinner";
 
 export default function Agents() {
   const agents = useSelector(getAllAgents);
@@ -17,18 +18,10 @@ export default function Agents() {
   renderAgents =
     agents.status === 200 ? (
       agents.data.map((agent, index) => {
-        return (
-          <Link to={`${agent.uuid}`} key={index}>
-            <>
-              <GalleryItemBig bgImg={agent.background} key={index}>
-                <ItemImageBig src={agent.fullPortrait}></ItemImageBig>
-              </GalleryItemBig>
-            </>
-          </Link>
-        );
+        return <GalleryItemAgent key={index} agent={agent} />;
       })
     ) : (
-      <h1>erro</h1>
+      <Spinner />
     );
   return (
     <Container>

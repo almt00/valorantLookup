@@ -12,8 +12,19 @@ export const fetchAsyncAgents = createAsyncThunk(
   }
 );
 
+export const fetchAsyncAgentDetail = createAsyncThunk(
+  "agents/fetchAsyncAgentDetail",
+  async (id) => {
+    const response = await fetch(`https://valorant-api.com/v1/agents/${id}`);
+    let actualData = await response.json();
+    //actualData = actualData.data;
+    return actualData;
+  }
+);
+
 const initialState = {
   agents: {},
+  selectedAgent: {},
 };
 
 const agentsSlice = createSlice({
@@ -22,6 +33,9 @@ const agentsSlice = createSlice({
   reducers: {
     addAgents: (state, { payload }) => {
       state.agents = payload;
+    },
+    removeSelectedAgent: (state) => {
+      state.selectedAgent = {};
     },
   },
   extraReducers: {
@@ -35,9 +49,16 @@ const agentsSlice = createSlice({
     [fetchAsyncAgents.rejected]: () => {
       console.log("rejected :( ");
     },
+    [fetchAsyncAgentDetail.fulfilled]: (state, { payload }) => {
+      console.log("fetched successfully!", payload);
+
+      return { ...state, selectedAgent: payload };
+    },
   },
 });
 
-export const { addAgents } = agentsSlice.actions;
+export const { removeSelectedAgent } = agentsSlice.actions;
 export const getAllAgents = (state) => state.agents.agents; // nome da slice (agents) e nome da propriedade (agents)
+export const getSelectedAgent = (state) => state.agents.selectedAgent;
+
 export default agentsSlice.reducer;

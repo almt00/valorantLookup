@@ -2,6 +2,8 @@
 build
 coverage
 
+package.json
+package-lock.json
 **/.git
 **/.svn
 **/.hg
@@ -9,3 +11,4 @@ coverage
 **/.git
 **/.svn
 **/.hg
+**/.yml
