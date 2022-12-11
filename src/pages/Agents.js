@@ -1,7 +1,7 @@
 /* eslint-disable */
 
-import { useSelector } from "react-redux";
-import { getAllAgents } from "../features/AgentsSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { getAllAgents, fetchAsyncAgents } from "../features/AgentsSlice";
 import { Container } from "../styles/Container";
 import Title from "../styles/Title";
 import { Gallery } from "../styles/Gallery";
@@ -9,13 +9,20 @@ import SelectorFilter from "./SelectorFilter";
 import Flex from "../styles/Flex";
 import GalleryItemAgent from "./GalleryItemAgent";
 import Spinner from "./Spinner";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Agents() {
+  const dispatch = useDispatch();
   const agents = useSelector(getAllAgents);
   const [filter, setFilter] = useState("All");
+  if (Object.keys(agents).length === 0 || agents === undefined) {
+    console.log("dispatch");
+    dispatch(fetchAsyncAgents());
+  }
+  useEffect(() => {
+    
+  }, []);
 
-  console.log(agents.data);
   let renderAgents = "";
   renderAgents =
     agents.status === 200 ? (

@@ -2,8 +2,6 @@
 
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
-import { getAllAgents } from "../features/AgentsSlice";
 
 const Selector = styled.select`
   width: 10rem;
