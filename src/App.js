@@ -8,6 +8,7 @@ import AgentDetail from "./pages/AgentDetail";
 import { Nav, Ul } from "./styles/Nav";
 import Footer from "./pages/Footer";
 import styled from "styled-components";
+import PageNotFound from "./pages/PageNotFound";
 
 const Wrapper = styled.div`
   position: relative;
@@ -27,12 +28,12 @@ function App() {
           <li>
             <Link to="/agents">Agents</Link>
           </li>
-          <li>
+         {/*  <li>
             <Link to="/abilities">Abilities</Link>
           </li>
           <li>
             <Link to="/search">Search</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/about">About</Link>
           </li>
@@ -41,10 +42,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/agents" element={<Agents />} />
-        <Route path="/abilities" element={<h1>Abilities</h1>} />
-        <Route path="/search" element={<h1>Search</h1>} />
+        {/* <Route path="/abilities" element={<h1>Abilities</h1>} />
+        <Route path="/search" element={<h1>Search</h1>} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/agents/:id" element={<AgentDetail />} />
+        <Route path="*" element={<PageNotFound />} />
+
       </Routes>
       <Footer />
     </Wrapper>
