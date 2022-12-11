@@ -1,5 +1,9 @@
+/* eslint-disable */
+
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+import { getAllAgents } from "../features/AgentsSlice";
 
 const Selector = styled.select`
   width: 10rem;
@@ -22,14 +26,21 @@ const Form = styled.form`
   font-family: "Inter", sans-serif;
 `;
 
-export default function SelectorFilter() {
+export default function SelectorFilter(props) {
+  let setFilter = props.setFilter;
+
+  const selected = () => {
+    let selectedOption = document.getElementById("agentClasses").value;
+    setFilter(selectedOption);
+  };
+
   return (
     <div>
-      <Form action="">
-        <label htmlFor="AgentClasses" style={{ color: "#FF4655" }}>
+      <Form>
+        <label htmlFor="agentClasses" style={{ color: "#FF4655" }}>
           <b>Class:</b>
         </label>
-        <Selector name="AgentClasses" id="AgentClasses">
+        <Selector name="agentClasses" id="agentClasses" onChange={selected}>
           <option value="All" defaultValue>
             All
           </option>

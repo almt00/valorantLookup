@@ -9,16 +9,22 @@ import SelectorFilter from "./SelectorFilter";
 import Flex from "../styles/Flex";
 import GalleryItemAgent from "./GalleryItemAgent";
 import Spinner from "./Spinner";
+import { useState } from "react";
 
 export default function Agents() {
   const agents = useSelector(getAllAgents);
+  const [filter, setFilter] = useState("All");
 
   console.log(agents.data);
   let renderAgents = "";
   renderAgents =
     agents.status === 200 ? (
       agents.data.map((agent, index) => {
-        return <GalleryItemAgent key={index} agent={agent} />;
+        if (agent.role.displayName === filter) {
+          return <GalleryItemAgent key={index} agent={agent} />;
+        } else if (filter === "All") {
+          return <GalleryItemAgent key={index} agent={agent} />;
+        }
       })
     ) : (
       <Spinner />
@@ -28,9 +34,8 @@ export default function Agents() {
       <Container>
         <Flex>
           <Title>Agents</Title>
-          <SelectorFilter />
+          <SelectorFilter setFilter={setFilter} />
         </Flex>
-
         <Gallery>{renderAgents}</Gallery>
       </Container>
     </>
