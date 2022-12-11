@@ -74,6 +74,16 @@ const AbilityAbout = styled.div`
   border-radius: 10px;
 `;
 
+const AudioPlayer = styled.figure`
+  margin: 1rem 0;
+  audio::-webkit-media-controls-panel {
+    background-color: #e6e6e6;
+  }
+  audio {
+    margin: 0.5rem 0;
+  }
+`;
+
 export default function AgentDetail() {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -114,6 +124,16 @@ export default function AgentDetail() {
               <p>
                 <b>Developer Name:</b> {agentData.developerName}
               </p>
+              <AudioPlayer>
+                <figcaption>
+                  <b>Agent's voiceline:</b>
+                </figcaption>
+                <audio controls src={agentData.voiceLine.mediaList[0].wave}>
+                  <a href={agentData.voiceLine.mediaList[0].wave}>
+                    Download audio
+                  </a>
+                </audio>
+              </AudioPlayer>
               <p>
                 <b>Class:</b> {agentData.role.displayName}
               </p>

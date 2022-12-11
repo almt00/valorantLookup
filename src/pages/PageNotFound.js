@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../styles/Button";
-//import styled from 'styled-components'
 import { Container } from "../styles/Container";
 import SubTitle from "../styles/SubTitle";
 import Title from "../styles/Title";

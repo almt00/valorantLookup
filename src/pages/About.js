@@ -51,7 +51,7 @@ export default function Home() {
             weapons, contracts, maps and more.
           </p>
           <a
-            href="https://dash.valorant-api.com"
+            href="https://valorant-api.com"
             target="_blank"
             rel="noreferrer"
           >
