@@ -14,16 +14,17 @@ import {
   ItemImage,
   ItemImageBig,
 } from "../styles/Gallery";
+import Spinner from "./Spinner";
 
 export default function Home() {
   const dispatch = useDispatch();
+  const agents = useSelector(getAllAgents);
 
   // calling the API
   useEffect(() => {
     dispatch(fetchAsyncAgents());
   }, [dispatch]);
 
-  const agents = useSelector(getAllAgents);
   function renderRandomAgent() {
     if (agents.status === 200) {
       let allAgents = [...agents.data];
@@ -51,17 +52,19 @@ export default function Home() {
         </>
       );
     } else {
-      return <h1>loading</h1>;
+      return <Spinner />;
     }
   }
 
   return (
-    <Container>
-      <div>
-        <Title>Valorant Lookup</Title>
-        <SubTitle>agent of the day</SubTitle>
-      </div>
-      <Flex margin="1rem">{renderRandomAgent()}</Flex>
-    </Container>
+    <>
+      <Container>
+        <div>
+          <Title>Valorant Lookup</Title>
+          <SubTitle>agent of the moment</SubTitle>
+        </div>
+        <Flex margin="1rem">{renderRandomAgent()}</Flex>
+      </Container>
+    </>
   );
 }

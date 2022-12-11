@@ -42,7 +42,7 @@ body {
   font-size: 1rem;
   color: #000000;
   background-color: #F3F3F3;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 html,#root {
@@ -60,6 +60,11 @@ p {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+}
+
+b {
+  color: #FF4655;
+  font-weight: 800;
 }
 
 /* Make images easier to work with */

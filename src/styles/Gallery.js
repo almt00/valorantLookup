@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Gallery = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   gap: 1rem;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -20,6 +20,10 @@ const GalleryItem = styled.div`
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  pointer-events: all;
+  div,p,img {
+    pointer-events: none;
+  }
 `;
 
 const ItemImage = styled.img`

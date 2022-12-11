@@ -4,12 +4,12 @@ const Nav = styled.nav`
   font-family: "Mulish", sans-serif;
   font-weight: 800;
   background-color: #242424;
-  border-bottom: 7px solid #ff4655;
+  border-bottom: 5px solid #ff4655;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1vh 5vw;
+  padding: 0.5rem 5vw;
   color: #ffffff;
   position: sticky;
   top: 0;

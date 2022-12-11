@@ -6,10 +6,18 @@ import About from "./pages/About.js";
 import Agents from "./pages/Agents";
 import AgentDetail from "./pages/AgentDetail";
 import { Nav, Ul } from "./styles/Nav";
+import Footer from "./pages/Footer";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+`;
 
 function App() {
   return (
-    <>
+    <Wrapper>
       <Nav>
         <img src={logo}></img>
         <Ul>
@@ -38,7 +46,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/agents/:id" element={<AgentDetail />} />
       </Routes>
-    </>
+      <Footer />
+    </Wrapper>
   );
 }
 
