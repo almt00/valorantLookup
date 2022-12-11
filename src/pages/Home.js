@@ -52,17 +52,19 @@ export default function Home() {
         </>
       );
     } else {
-      return <Spinner/>;
+      return <Spinner />;
     }
   }
 
   return (
-    <Container>
-      <div>
-        <Title>Valorant Lookup</Title>
-        <SubTitle>agent of the day</SubTitle>
-      </div>
-      <Flex margin="1rem">{renderRandomAgent()}</Flex>
-    </Container>
+    <>
+      <Container>
+        <div>
+          <Title>Valorant Lookup</Title>
+          <SubTitle>agent of the moment</SubTitle>
+        </div>
+        <Flex margin="1rem">{renderRandomAgent()}</Flex>
+      </Container>
+    </>
   );
 }

@@ -24,13 +24,15 @@ export default function Agents() {
       <Spinner />
     );
   return (
-    <Container>
-      <Flex>
-        <Title>Agents</Title>
-        <SelectorFilter />
-      </Flex>
+    <>
+      <Container>
+        <Flex>
+          <Title>Agents</Title>
+          <SelectorFilter />
+        </Flex>
 
-      <Gallery>{renderAgents}</Gallery>
-    </Container>
+        <Gallery>{renderAgents}</Gallery>
+      </Container>
+    </>
   );
 }

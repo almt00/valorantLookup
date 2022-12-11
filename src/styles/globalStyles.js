@@ -42,7 +42,7 @@ body {
   font-size: 1rem;
   color: #000000;
   background-color: #F3F3F3;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 html,#root {

@@ -1,6 +1,8 @@
 /* eslint-disable */
 
 import React from "react";
+//import React, { useState, useEffect } from 'react';
+
 import {
   DisplayGalleryItem,
   Gallery,
@@ -25,7 +27,7 @@ export default function AbilityDetail({
   };
 
   return (
-    <GalleryItem key={index} id={ability.displayName} onClick={clicked}>
+    <GalleryItem key={index} id={ability.displayName} onClick={clicked} style={{cursor: 'pointer'}}>
       <div>{ability.slot}</div>
       <p>{ability.displayName}</p>
       <ItemImage src={ability.displayIcon}></ItemImage>
