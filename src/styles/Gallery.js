@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const Gallery = styled.div`
   display: flex;
@@ -9,6 +9,9 @@ const Gallery = styled.div`
   flex-wrap: wrap;
   align-self: flex-end;
   margin-top: 1rem;
+  @media screen and (max-width: 650px) {
+    justify-content: center;
+  }
 `;
 
 const GalleryItem = styled.div`
@@ -21,8 +24,14 @@ const GalleryItem = styled.div`
   overflow: hidden;
   position: relative;
   pointer-events: all;
-  div,p,img {
+  div,
+  p,
+  img {
     pointer-events: none;
+  }
+  @media screen and (max-width: 650px) {
+    height: auto;
+    width: auto;
   }
 `;
 
@@ -57,6 +66,9 @@ const GalleryItemBig = styled(GalleryItem)`
 const DisplayGalleryItem = styled(GalleryItemBig)`
   height: 17rem;
   width: 40%;
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
 `;
 const GalleryItemTitle = styled.h1`
   font-family: "Inter", sans-serif;

@@ -38,6 +38,6 @@ build-job: # This job runs in the build stage.
 deploy-job: # This job runs in the deploy stage.
   stage: deploy
   script:
-     - npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN dir build/ --prod
+    - npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN dir build/ --prod
   rules:
     - if: $CI_COMMIT_BRANCH == "main"

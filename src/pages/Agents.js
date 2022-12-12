@@ -19,9 +19,7 @@ export default function Agents() {
     console.log("dispatch");
     dispatch(fetchAsyncAgents());
   }
-  useEffect(() => {
-    
-  }, []);
+  useEffect(() => {}, []);
 
   let renderAgents = "";
   renderAgents =

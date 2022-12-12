@@ -21,7 +21,7 @@ import {
   getSelectedAgent,
   removeSelectedAgent,
 } from "../features/AgentsSlice";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import AbilityDetail from "./AbilityDetail";
 
 const Grid = styled.div`
@@ -32,6 +32,12 @@ const Grid = styled.div`
   padding: 2rem;
   border-radius: 10px;
   margin-top: 1rem;
+  margin-top: 1rem;
+
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 100%;
+    grid-template-rows: auto 2rem auto;
+  }
 `;
 const GridImage = styled.div`
   grid-column: 1 /1;
@@ -52,16 +58,30 @@ const GridImage = styled.div`
     margin-left: 3rem;
     margin-top: 2rem;
   }
+
+  @media screen and (max-width: 650px) {
+    max-width: 100%;
+  }
 `;
 
 const AgentInfo = styled.div`
   grid-row: 2;
   max-width: 20rem;
+  @media screen and (max-width: 650px) {
+    grid-column: 1 /4;
+    max-width: 100%;
+  }
 `;
 
 const GridMain = styled.div`
   grid-column: 3;
   grid-row: 1;
+
+  @media screen and (max-width: 650px) {
+    grid-column: 1;
+    grid-row: 3;
+    max-width: 100%;
+  }
 `;
 
 const AbilityAbout = styled.div`
@@ -81,6 +101,11 @@ const AudioPlayer = styled.figure`
   }
   audio {
     margin: 0.5rem 0;
+    width: 100%;
+  }
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display {
+    display: none;
   }
 `;
 

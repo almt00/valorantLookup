@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import polygon from "../assets/polygon.svg";
 
 const Container = styled.div`
@@ -9,8 +9,7 @@ const Container = styled.div`
   padding-right: 8vw;
   padding-left: 8vw;
   padding-top: 5vh;
-  padding-bottom: 5vh;
-
+  padding-bottom: 10vh;
   a {
     color: red;
     display: inline;
@@ -27,6 +26,10 @@ const AltContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   gap: 50px;
+  @media screen and (max-width: 650px) {
+    background: none;
+    padding-bottom: 10vh;
+  }
 `;
 
 export { Container, AltContainer };

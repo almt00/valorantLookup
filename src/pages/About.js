@@ -1,29 +1,30 @@
 import React from "react";
 import agent_group from "../assets/agent_group.png";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import Title from "../styles/Title";
 import SubTitle from "../styles/SubTitle";
 import { AltContainer } from "../styles/Container";
 import Button from "../styles/Button";
 
 const Flex = styled.div`
-  /* isplay: flex;
-  flex-direction: column;
-  gap: 1rem; */
   display: grid;
 `;
 
 const Left = styled.div`
-  /* align-self: flex-start;
-  max-width: 50vw; */
   grid-row: 1 / span 2;
   grid-column: 1 / span 2;
+  @media screen and (max-width: 650px) {
+    grid-row: 1;
+    grid-column: 1;
+  }
 `;
 const Right = styled.div`
-  /* align-self: flex-end;
-  height: 50%; */
   grid-row: 3 / span 1;
   grid-column: 3 / span 2;
+  @media screen and (max-width: 650px) {
+    grid-row: 2;
+    grid-column: 1;
+  }
 `;
 
 const AgentsImg = styled.img`
@@ -50,11 +51,7 @@ export default function Home() {
             and it has a lot of information about the game&apos;s agents,
             weapons, contracts, maps and more.
           </p>
-          <a
-            href="https://valorant-api.com"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://valorant-api.com" target="_blank" rel="noreferrer">
             <Button type="button">go to API</Button>
           </a>
         </Left>

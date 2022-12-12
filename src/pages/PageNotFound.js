@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import Button from "../styles/Button";
 import { Container } from "../styles/Container";
 import SubTitle from "../styles/SubTitle";
@@ -20,8 +20,7 @@ export default function PageNotFound() {
       <Title>404</Title>
       <SubTitle>Page Not Found</SubTitle>
       <Link to="/">
-      <Button>Take Me Home</Button>
-
+        <Button>Take Me Home</Button>
       </Link>
     </ContainerCentered>
   );

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const Nav = styled.nav`
   font-family: "Mulish", sans-serif;
@@ -15,6 +15,9 @@ const Nav = styled.nav`
   top: 0;
   width: 100%;
   z-index: 999;
+  img {
+    max-height: 2rem;
+  }
 `;
 
 const Ul = styled.ul`
@@ -22,7 +25,7 @@ const Ul = styled.ul`
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  gap: 60px;
+  gap: 3rem;
   color: #ffffff;
   list-style: none;
 
@@ -34,6 +37,11 @@ const Ul = styled.ul`
 
   a:hover {
     color: #ff4655;
+  }
+
+  @media screen and (max-width: 650px) {
+    gap: 2rem;
+    padding: 0;
   }
 `;
 export { Nav, Ul };

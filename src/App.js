@@ -7,7 +7,7 @@ import Agents from "./pages/Agents";
 import AgentDetail from "./pages/AgentDetail";
 import { Nav, Ul } from "./styles/Nav";
 import Footer from "./pages/Footer";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import PageNotFound from "./pages/PageNotFound";
 
 const Wrapper = styled.div`
@@ -28,7 +28,7 @@ function App() {
           <li>
             <Link to="/agents">Agents</Link>
           </li>
-         {/*  <li>
+          {/*  <li>
             <Link to="/abilities">Abilities</Link>
           </li>
           <li>
@@ -47,7 +47,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/agents/:id" element={<AgentDetail />} />
         <Route path="*" element={<PageNotFound />} />
-
       </Routes>
       <Footer />
     </Wrapper>

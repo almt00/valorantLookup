@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const Selector = styled.select`
   width: 10rem;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const SubTitle = styled.h2`
   font-family: "Mulish", sans-serif;

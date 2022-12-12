@@ -27,7 +27,12 @@ export default function AbilityDetail({
   };
 
   return (
-    <GalleryItem key={index} id={ability.displayName} onClick={clicked} style={{cursor: 'pointer'}}>
+    <GalleryItem
+      key={index}
+      id={ability.displayName}
+      onClick={clicked}
+      style={{ cursor: "pointer" }}
+    >
       <div>{ability.slot}</div>
       <p>{ability.displayName}</p>
       <ItemImage src={ability.displayIcon}></ItemImage>

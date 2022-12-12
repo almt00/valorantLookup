@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const FooterStyle = styled.footer`
   position: absolute;
@@ -28,6 +28,9 @@ const FooterStyle = styled.footer`
     p {
       margin: 0;
     }
+  }
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
   }
 `;
 
