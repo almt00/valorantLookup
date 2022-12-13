@@ -1,0 +1,43 @@
+image: node:latest
+stages: # List of stages for jobs, and their order of execution
+  - install
+  - test
+  - build
+  - deploy
+
+install:
+  stage: install
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 15 mins
+
+lint-test-job: # This job also runs in the test stage.
+  stage: test # It can run at the same time as jest-test-job (in parallel).
+  script:
+    - npm run lint
+
+format-test-job: # This job also runs in the test stage.
+  stage: test
+  script:
+    - npm run format
+
+build-job: # This job runs in the build stage.
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+    expire_in: 15 mins
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+
+deploy-job: # This job runs in the deploy stage.
+  stage: deploy
+  script:
+     - npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --dir build/ --prod
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
