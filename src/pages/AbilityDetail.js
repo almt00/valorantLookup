@@ -1,16 +1,8 @@
 /* eslint-disable */
 
 import React from "react";
-//import React, { useState, useEffect } from 'react';
 
-import {
-  DisplayGalleryItem,
-  Gallery,
-  GalleryItem,
-  GalleryItemTitle,
-  ItemImage,
-  ItemImageBig,
-} from "../styles/Gallery";
+import { GalleryItem, ItemImage } from "../styles/Gallery";
 
 export default function AbilityDetail({
   ability,

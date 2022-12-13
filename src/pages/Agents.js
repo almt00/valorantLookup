@@ -9,7 +9,7 @@ import SelectorFilter from "./SelectorFilter";
 import Flex from "../styles/Flex";
 import GalleryItemAgent from "./GalleryItemAgent";
 import Spinner from "./Spinner";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Agents() {
   const dispatch = useDispatch();
@@ -19,7 +19,6 @@ export default function Agents() {
     console.log("dispatch");
     dispatch(fetchAsyncAgents());
   }
-  useEffect(() => {}, []);
 
   let renderAgents = "";
   renderAgents =
