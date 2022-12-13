@@ -1,4 +1,3 @@
-import "./App.css";
 import logo from "./assets/valorant_logo.svg";
 import { Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home.js";
