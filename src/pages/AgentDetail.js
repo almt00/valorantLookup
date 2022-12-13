@@ -4,18 +4,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import SubTitle from "../styles/SubTitle";
-import Flex from "../styles/Flex";
 import { Container } from "../styles/Container";
 import Title from "../styles/Title";
 import Spinner from "./Spinner";
-import {
-  DisplayGalleryItem,
-  Gallery,
-  GalleryItem,
-  GalleryItemTitle,
-  ItemImage,
-  ItemImageBig,
-} from "../styles/Gallery";
+import { Gallery } from "../styles/Gallery";
 import {
   fetchAsyncAgentDetail,
   getSelectedAgent,
