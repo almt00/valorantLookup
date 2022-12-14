@@ -5,7 +5,7 @@ import About from "./pages/About.js";
 import Agents from "./pages/Agents";
 import AgentDetail from "./pages/AgentDetail";
 import { Nav, Ul } from "./styles/Nav";
-import Footer from "./pages/Footer";
+import Footer from "./components/Footer";
 import styled from "styled-components/macro";
 import PageNotFound from "./pages/PageNotFound";
 

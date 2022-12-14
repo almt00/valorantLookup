@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import SubTitle from "../styles/SubTitle";
 import { Container } from "../styles/Container";
 import Title from "../styles/Title";
-import Spinner from "./Spinner";
+import Spinner from "../components/Spinner";
 import { Gallery } from "../styles/Gallery";
 import {
   fetchAsyncAgentDetail,
@@ -14,7 +14,7 @@ import {
   removeSelectedAgent,
 } from "../features/AgentsSlice";
 import styled from "styled-components/macro";
-import AbilityDetail from "./AbilityDetail";
+import AbilityDetail from "../components/AbilityDetail";
 
 const Grid = styled.div`
   display: grid;

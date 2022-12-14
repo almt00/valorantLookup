@@ -14,7 +14,7 @@ import {
   ItemImage,
   ItemImageBig,
 } from "../styles/Gallery";
-import Spinner from "./Spinner";
+import Spinner from "../components/Spinner";
 
 export default function Home() {
   const dispatch = useDispatch();
