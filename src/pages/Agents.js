@@ -5,10 +5,10 @@ import { getAllAgents, fetchAsyncAgents } from "../features/AgentsSlice";
 import { Container } from "../styles/Container";
 import Title from "../styles/Title";
 import { Gallery } from "../styles/Gallery";
-import SelectorFilter from "./SelectorFilter";
+import SelectorFilter from "../components/SelectorFilter";
 import Flex from "../styles/Flex";
-import GalleryItemAgent from "./GalleryItemAgent";
-import Spinner from "./Spinner";
+import GalleryItemAgent from "../components/GalleryItemAgent";
+import Spinner from "../components/Spinner";
 import { useState } from "react";
 
 export default function Agents() {
